@@ -4,6 +4,8 @@ const commonConfig = require('./webpack.common')
 const pkgJson = require('../package.json')
 
 const domain = process.env.PRODUCTION_DOMAIN
+console.log(`marketing@${domain}/marketing/latest/remoteEntry.js`)
+console.log(domain)
 
 const prodConfig = {
     mode: 'production',
@@ -15,7 +17,7 @@ const prodConfig = {
         new ModuleFederationPlugin({
             name: 'container',
             remotes: {
-                marketing: `marketing@${domain}/marketing/remoteEntry.js`
+                marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`
             },
             shared: pkgJson.dependencies
         })
