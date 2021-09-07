@@ -5,8 +5,9 @@ export default () => {
     return (
         <>
         <h1>
-            hi test 1
+            Hi, there!
         </h1>
+        <hr />
         <MarketingApp />
         </>
     )
